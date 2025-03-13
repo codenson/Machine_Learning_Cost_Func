@@ -1,5 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
+"""
+This file implements a simple linear regression model to predict housing prices based on house size.
+It includes functions for computing the cost (error) of the model and visualizing the predictions.
+
+The main components are:
+- Data loading and preprocessing
+- Cost function implementation
+- Visualization function for model predictions
+"""
 
 
 # a model which can predict housing prices given the size of the house.
@@ -22,13 +31,7 @@ def compute_cost (x, y, w, b):
     return cost
 print("val : " , compute_cost(x_train, y_train, 50, 100))
 
-# def plt_intuition(x, y):
-#     plt.scatter(x, y, marker='x', c='r', label="Actual Values")
-#     plt.title("Housing Prices")
-#     plt.ylabel('Price (in 1000s of dollars)')
-#     plt.xlabel('Size (1000 sqft)')
-#     plt.legend()
-#     plt.show()
+### Visualization function for model predictions
 def plt_intuition(x, y, w, b=100):
     plt.scatter(x, y, marker='x', c='r', label="Actual Values")
     
